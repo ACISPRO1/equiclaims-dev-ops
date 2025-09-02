@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
   <head>
@@ -20,11 +21,13 @@
         background: #fff;
         box-shadow: 0 2px 16px 0 rgba(60, 90, 130, 0.07);
       }
-      .form-group { margin-bottom: 1.5rem; }
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
       label {
         font-weight: 600;
         display: block;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         color: #2a3a4d;
       }
       .options {
@@ -32,7 +35,7 @@
         flex-wrap: wrap;
         gap: 1.5rem;
         align-items: center;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
       .options label {
         font-weight: 400;
@@ -43,7 +46,9 @@
         padding: 0.3em 0.8em;
         border-radius: 6px;
         border: 1px solid #e0e6ed;
-        transition: border 0.2s, background 0.2s;
+        transition:
+          border 0.2s,
+          background 0.2s;
       }
       .options label:has(input:checked) {
         border: 1.5px solid #4a90e2;
@@ -68,10 +73,13 @@
           gap: 0.7rem;
           align-items: flex-start;
         }
-        input, select, button {
+        input,
+        select,
+        button {
           font-size: 1.1rem;
         }
-        label, legend {
+        label,
+        legend {
           font-size: 1rem;
         }
         button {
@@ -95,33 +103,35 @@
         border-radius: 8px;
         display: inline-block;
       }
-      input, select {
+      input,
+      select {
         width: 100%;
-        padding: .5rem;
-        margin-top: .25rem;
+        padding: 0.5rem;
+        margin-top: 0.25rem;
         border-radius: 6px;
         border: 1px solid #b0b8c1;
         background: #f9fbfd;
         color: #222;
         font-size: 1rem;
       }
-        input[type="radio"] {
-          margin-right: 0.5rem;
-        }
+      input[type="radio"] {
+        margin-right: 0.5rem;
+      }
 
-        @media (max-width: 500px) {
-          .options {
-            flex-direction: column;
-            gap: 0.5rem;
-          }
+      @media (max-width: 500px) {
+        .options {
+          flex-direction: column;
+          gap: 0.5rem;
         }
-      input:focus, select:focus {
+      }
+      input:focus,
+      select:focus {
         outline: 2px solid #4a90e2;
         border-color: #4a90e2;
         background: #fff;
       }
       button {
-        padding: .5rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         border-radius: 8px;
         border: none;
         background: #4a90e2;
@@ -131,7 +141,8 @@
         cursor: pointer;
         transition: background 0.2s;
       }
-      button:hover, button:focus {
+      button:hover,
+      button:focus {
         background: #357ab8;
       }
       .result {
@@ -144,125 +155,349 @@
         padding: 1rem 1.5rem;
         box-shadow: 0 2px 8px 0 rgba(60, 90, 130, 0.07);
         min-height: 2.5rem;
-        transition: background 0.2s, color 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
       }
-      small { color: #666; }
+      small {
+        color: #666;
+      }
       @media (max-width: 700px) {
-        .form-card { padding: 1rem; }
+        .form-card {
+          padding: 1rem;
+        }
       }
     </style>
   </head>
   <body>
-  <h1>Vehicle Claims Submission Form</h1>
-  <div style="margin-bottom:1.5rem; color:#357ab8; font-size:1rem;">
-    <strong>Note:</strong> Fields marked with <span style="color:red">*</span> are required.
-  </div>
+    <h1>Vehicle Claims Submission Form</h1>
+    <div style="margin-bottom: 1.5rem; color: #357ab8; font-size: 1rem">
+      <strong>Note:</strong> Fields marked with
+      <span style="color: red">*</span> are required.
+    </div>
     <form id="appraisal-form" class="form-card">
-      <fieldset style="border:none; padding:0; margin:0 0 1.5rem 0;">
-        <legend style="font-size:1.2rem; font-weight:700; color:#357ab8; margin-bottom:1rem;">General Info</legend>
+      <fieldset style="border: none; padding: 0; margin: 0 0 1.5rem 0">
+        <legend
+          style="
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #357ab8;
+            margin-bottom: 1rem;
+          "
+        >
+          General Info
+        </legend>
         <div class="form-group">
-          <label id="owner-label">Are you the owner of the vehicle that was in an accident? <span style="color:red">*</span></label>
+          <label id="owner-label"
+            >Are you the owner of the vehicle that was in an accident?
+            <span style="color: red">*</span></label
+          >
           <div class="options" role="radiogroup" aria-labelledby="owner-label">
-            <label for="owner_yes"><input type="radio" id="owner_yes" name="owner" value="yes" required aria-required="true"> Yes</label>
-            <label for="owner_no"><input type="radio" id="owner_no" name="owner" value="no" aria-required="true"> No</label>
+            <label for="owner_yes"
+              ><input
+                type="radio"
+                id="owner_yes"
+                name="owner"
+                value="yes"
+                required
+                aria-required="true"
+              />
+              Yes</label
+            >
+            <label for="owner_no"
+              ><input
+                type="radio"
+                id="owner_no"
+                name="owner"
+                value="no"
+                aria-required="true"
+              />
+              No</label
+            >
           </div>
         </div>
         <div class="form-group">
-          <label for="vehicle_status">Vehicle status (total loss / Borderline total loss): <span style="color:red">*</span></label>
-          <select id="vehicle_status" name="vehicle_status" required aria-required="true">
+          <label for="vehicle_status"
+            >Vehicle status (total loss / Borderline total loss):
+            <span style="color: red">*</span></label
+          >
+          <select
+            id="vehicle_status"
+            name="vehicle_status"
+            required
+            aria-required="true"
+          >
             <option value="">Select...</option>
             <option value="obvious_total_loss">Obvious Total Loss</option>
             <option value="borderline_total_loss">Borderline Total Loss</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="inspection_date">Date of Inspection: <span style="color:red">*</span></label>
-          <input type="date" id="inspection_date" name="inspection_date" required aria-required="true">
+          <label for="inspection_date"
+            >Date of Inspection: <span style="color: red">*</span></label
+          >
+          <input
+            type="date"
+            id="inspection_date"
+            name="inspection_date"
+            required
+            aria-required="true"
+          />
         </div>
       </fieldset>
+      <div class="form-group" id="damage-photos-group">
+
       <fieldset class="form-group">
-        <legend>Vehicle drivable? <span style="color:red">*</span></legend>
+        <legend>Vehicle drivable? <span style="color: red">*</span></legend>
         <div class="options" role="radiogroup" aria-label="Vehicle drivable?">
-          <label for="drivable_yes"><input type="radio" id="drivable_yes" name="drivable" value="yes" required aria-required="true"> Yes</label>
-          <label for="drivable_no"><input type="radio" id="drivable_no" name="drivable" value="no" aria-required="true"> No</label>
+          <label for="drivable_yes"
+            ><input
+              type="radio"
+              id="drivable_yes"
+              name="drivable"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="drivable_no"
+            ><input
+              type="radio"
+              id="drivable_no"
+              name="drivable"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
         </div>
       </fieldset>
       <h2>Accident Details</h2>
       <fieldset class="form-group">
-  <legend>Has your vehicle been involved in any accidents prior to this one? <span style="color:red">*</span></legend>
+        <legend>
+          Has your vehicle been involved in any accidents prior to this one?
+          <span style="color: red">*</span>
+        </legend>
         <div class="options" role="radiogroup" aria-label="Previous accidents">
-          <label for="prev_accident_yes"><input type="radio" id="prev_accident_yes" name="prev_accident" value="yes" required aria-required="true"> Yes</label>
-          <label for="prev_accident_no"><input type="radio" id="prev_accident_no" name="prev_accident" value="no" aria-required="true"> No</label>
+          <label for="prev_accident_yes"
+            ><input
+              type="radio"
+              id="prev_accident_yes"
+              name="prev_accident"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="prev_accident_no"
+            ><input
+              type="radio"
+              id="prev_accident_no"
+              name="prev_accident"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
         </div>
       </fieldset>
       <fieldset class="form-group">
-        <legend>Were you at fault? <span style="color:red">*</span></legend>
+        <legend>Were you at fault? <span style="color: red">*</span></legend>
         <div class="options" role="radiogroup" aria-label="At fault">
-          <label for="at_fault_yes"><input type="radio" id="at_fault_yes" name="at_fault" value="yes" required aria-required="true"> Yes</label>
-          <label for="at_fault_no"><input type="radio" id="at_fault_no" name="at_fault" value="no" aria-required="true"> No</label>
-          <label for="at_fault_unsure"><input type="radio" id="at_fault_unsure" name="at_fault" value="unsure" aria-required="true"> Unknown</label>
+          <label for="at_fault_yes"
+            ><input
+              type="radio"
+              id="at_fault_yes"
+              name="at_fault"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="at_fault_no"
+            ><input
+              type="radio"
+              id="at_fault_no"
+              name="at_fault"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
+          <label for="at_fault_unsure"
+            ><input
+              type="radio"
+              id="at_fault_unsure"
+              name="at_fault"
+              value="unsure"
+              aria-required="true"
+            />
+            Unknown</label
+          >
         </div>
       </fieldset>
       <fieldset class="form-group">
-        <legend>Was there another party/vehicle involved in the accident? <span style="color:red">*</span></legend>
-        <div class="options" role="radiogroup" aria-label="Other party involved">
-          <label for="other_party_yes"><input type="radio" id="other_party_yes" name="other_party" value="yes" required aria-required="true"> Yes</label>
-          <label for="other_party_no"><input type="radio" id="other_party_no" name="other_party" value="no" aria-required="true"> No, it happened due to a natural disaster, an animal, or some other cause that didn't involve another vehicle.</label>
-  @media (max-width: 600px) {
+        <legend>
+          Was there another party/vehicle involved in the accident?
+          <span style="color: red">*</span>
+        </legend>
+        <div
+          class="options"
+          role="radiogroup"
+          aria-label="Other party involved"
+        >
+          <label for="other_party_yes"
+            ><input
+              type="radio"
+              id="other_party_yes"
+              name="other_party"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="other_party_no"
+            ><input
+              type="radio"
+              id="other_party_no"
+              name="other_party"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
+          
         </div>
       </fieldset>
       <fieldset class="form-group">
-        <legend>Are you insured? <span style="color:red">*</span></legend>
+        <legend>Are you insured? <span style="color: red">*</span></legend>
         <div class="options" role="radiogroup" aria-label="Are you insured?">
-          <label for="insured_yes"><input type="radio" id="insured_yes" name="insured" value="yes" required aria-required="true"> Yes</label>
-          <label for="insured_no"><input type="radio" id="insured_no" name="insured" value="no" aria-required="true"> No</label>
+          <label for="insured_yes"
+            ><input
+              type="radio"
+              id="insured_yes"
+              name="insured"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="insured_no"
+            ><input
+              type="radio"
+              id="insured_no"
+              name="insured"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
         </div>
       </fieldset>
       <fieldset class="form-group">
-        <legend>Have you received a damage or repair estimate yet? <span style="color:red">*</span></legend>
+        <legend>
+          Have you received a damage or repair estimate yet?
+          <span style="color: red">*</span>
+        </legend>
         <div class="options" role="radiogroup" aria-label="Received estimate">
-          <label for="estimate_yes"><input type="radio" name="estimate" id="estimate_yes" value="yes" required aria-required="true"> Yes</label>
-          <label for="estimate_no"><input type="radio" name="estimate" id="estimate_no" value="no" aria-required="true"> No</label>
+          <label for="estimate_yes"
+            ><input
+              type="radio"
+              name="estimate"
+              id="estimate_yes"
+              value="yes"
+              required
+              aria-required="true"
+            />
+            Yes</label
+          >
+          <label for="estimate_no"
+            ><input
+              type="radio"
+              name="estimate"
+              id="estimate_no"
+              value="no"
+              aria-required="true"
+            />
+            No</label
+          >
         </div>
       </fieldset>
-      <div class="form-group" id="estimate-upload-group" style="display:none;">
-  <label for="estimate_pdf">Upload your damage estimate (PDF only) <span style="color:red">*</span>:</label>
-  <input type="file" id="estimate_pdf" name="estimate_pdf" accept="application/pdf" aria-describedby="estimate_pdf_error" aria-required="true">
-  <div id="estimate_pdf_error" class="error-msg" style="color:red; font-size:0.95em; margin-top:0.25em;" aria-live="assertive"></div>
+      <div class="form-group" id="estimate-upload-group" style="display: none">
+        <label for="estimate_pdf"
+          >Upload your damage estimate (PDF only)
+          <span style="color: red">*</span>:</label
+        >
+        <input
+          type="file"
+          id="estimate_pdf"
+          name="estimate_pdf"
+          accept="application/pdf"
+          aria-describedby="estimate_pdf_error"
+          aria-required="true"
+        />
+        <div
+          id="estimate_pdf_error"
+          class="error-msg"
+          style="color: red; font-size: 0.95em; margin-top: 0.25em"
+          aria-live="assertive"
+        ></div>
+      </div>
+
+      <div class="form-group" id="damage-photos-group">
+        <label for="damage_photos">Upload damage photos (optional, JPG/PNG, up to 5 files):</label>
+        <input
+          type="file"
+          id="damage_photos"
+          name="damage_photos"
+          accept="image/jpeg,image/png"
+          multiple
+          aria-describedby="damage_photos_error"
+        />
+        <div id="damage_photos_error" class="error-msg" style="color: red; font-size: 0.95em; margin-top: 0.25em" aria-live="assertive"></div>
+        <div id="damage_photos_preview" style="display: flex; gap: 0.5em; margin-top: 0.5em;"></div>
       </div>
       <div class="form-group">
         <label>Where is the vehicle current location?</label>
-        <input type="text" name="vehicle_location" required>
+        <input type="text" name="vehicle_location" required />
       </div>
       <h2>Contact Info</h2>
       <div class="form-group">
         <label>Vehicle Owner First Name *</label>
-        <input type="text" name="first_name" required>
+        <input type="text" name="first_name" required />
       </div>
       <div class="form-group">
         <label>Vehicle Owner Last Name *</label>
-        <input type="text" name="last_name" required>
+        <input type="text" name="last_name" required />
       </div>
       <div class="form-group">
         <label>Vehicle Owner Email *</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required />
       </div>
       <div class="form-group">
         <label>Mobile Phone *</label>
-        <input type="tel" name="phone" required>
-        <small>We require a valid mobile number to prevent spam and ensure you are easily reachable by our vehicle appraisers.</small>
+        <input type="tel" name="phone" required />
+        <small
+          >We require a valid mobile number to prevent spam and ensure you are
+          easily reachable by our vehicle appraisers.</small
+        >
       </div>
       <div class="form-group">
-  <label for="zip">Zip Code <span style="color:red">*</span></label>
-        <input type="text" id="zip" name="zip" maxlength="10" required>
+        <label for="zip">Zip Code <span style="color: red">*</span></label>
+        <input type="text" id="zip" name="zip" maxlength="10" required />
       </div>
       <div class="form-group">
-    <label for="city">City</label>
-    <input type="text" id="city" name="city">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" />
       </div>
       <div class="form-group">
-    <label for="state">State</label>
-    <input type="text" id="state" name="state">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" />
       </div>
       <h2>Vehicle Info</h2>
       <div class="form-group">
@@ -273,17 +508,31 @@
           <option value="year_make_model">Year, Make, Model</option>
         </select>
       </div>
-      <div class="form-group" id="vin-group" style="display:none;">
-  <label>Vehicle VIN *</label>
-  <input type="text" name="vehicle_vin" id="vehicle_vin" maxlength="17" minlength="11" pattern="[A-HJ-NPR-Z0-9]{11,17}" placeholder="Enter VIN" autocomplete="off">
-  <button type="button" id="decode_vin_btn" style="margin-top:0.5rem;">Decode VIN</button>
-  <div id="vin-info" style="margin-top:10px;"></div>
-        <div id="vin-decode-status" style="margin-top:0.5rem;color:#666;"></div>
+      <div class="form-group" id="vin-group" style="display: none">
+        <label>Vehicle VIN *</label>
+        <input
+          type="text"
+          name="vehicle_vin"
+          id="vehicle_vin"
+          maxlength="17"
+          minlength="11"
+          pattern="[A-HJ-NPR-Z0-9]{11,17}"
+          placeholder="Enter VIN"
+          autocomplete="off"
+        />
+        <button type="button" id="decode_vin_btn" style="margin-top: 0.5rem">
+          Decode VIN
+        </button>
+        <div id="vin-info" style="margin-top: 10px"></div>
+        <div
+          id="vin-decode-status"
+          style="margin-top: 0.5rem; color: #666"
+        ></div>
       </div>
       <div id="ymm-group">
         <div class="form-group">
           <label>Vehicle Year *</label>
-          <input type="text" name="vehicle_year" id="vehicle_year" required>
+          <input type="text" name="vehicle_year" id="vehicle_year" required />
         </div>
         <div class="form-group">
           <label>Vehicle Make *</label>
@@ -317,16 +566,27 @@
             <option value="Volvo">Volvo</option>
             <option value="Other">Other (type below)</option>
           </select>
-          <input type="text" name="vehicle_make_other" id="vehicle_make_input" placeholder="Type brand if not listed" style="margin-top:0.5rem;display:none;">
+          <input
+            type="text"
+            name="vehicle_make_other"
+            id="vehicle_make_input"
+            placeholder="Type brand if not listed"
+            style="margin-top: 0.5rem; display: none"
+          />
         </div>
         <div class="form-group">
           <label>Vehicle Model *</label>
-          <input type="text" name="vehicle_model" id="vehicle_model" required>
+          <input type="text" name="vehicle_model" id="vehicle_model" required />
         </div>
       </div>
-  <button type="submit">Submit Form</button>
+      <button type="submit">Submit Form</button>
       <div id="result" class="result" role="status" aria-live="polite">
-        We invite you to explore the possibility of a fair settlement claim by providing your contact information and vehicle details. Accurate and detailed information will significantly improve your chances of a successful claim. After we thoroughly review your information for accuracy, we will be able to assist you further. Please note that the initial consultation is always FREE!
+        We invite you to explore the possibility of a fair settlement claim by
+        providing your contact information and vehicle details. Accurate and
+        detailed information will significantly improve your chances of a
+        successful claim. After we thoroughly review your information for
+        accuracy, we will be able to assist you further. Please note that the
+        initial consultation is always FREE!
       </div>
     </form>
     <style>
@@ -342,39 +602,43 @@
         margin-left: 0.5em;
       }
       @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
     <script type="module" src="/main.js"></script>
     <script>
       // Show PDF upload if estimate is 'yes'
-      const estimateRadios = document.getElementsByName('estimate');
-      const uploadGroup = document.getElementById('estimate-upload-group');
-      estimateRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-          if (this.value === 'yes' && this.checked) {
-            uploadGroup.style.display = '';
-          } else if (this.value === 'no' && this.checked) {
-            uploadGroup.style.display = 'none';
-            document.getElementById('estimate_pdf').value = '';
+      const estimateRadios = document.getElementsByName("estimate");
+      const uploadGroup = document.getElementById("estimate-upload-group");
+      estimateRadios.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          if (this.value === "yes" && this.checked) {
+            uploadGroup.style.display = "";
+          } else if (this.value === "no" && this.checked) {
+            uploadGroup.style.display = "none";
+            document.getElementById("estimate_pdf").value = "";
           }
         });
       });
     </script>
     <script>
-const makeSelect = document.getElementById('vehicle_make_select');
-const makeInput = document.getElementById('vehicle_make_input');
-makeSelect.addEventListener('change', function() {
-  if (this.value === 'Other') {
-    makeInput.style.display = 'block';
-    makeInput.required = true;
-  } else {
-    makeInput.style.display = 'none';
-    makeInput.required = false;
-    makeInput.value = '';
-  }
-});
+      const makeSelect = document.getElementById("vehicle_make_select");
+      const makeInput = document.getElementById("vehicle_make_input");
+      makeSelect.addEventListener("change", function () {
+        if (this.value === "Other") {
+          makeInput.style.display = "block";
+          makeInput.required = true;
+        } else {
+          makeInput.style.display = "none";
+          makeInput.required = false;
+          makeInput.value = "";
+        }
+      });
     </script>
   </body>
 </html>

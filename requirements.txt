@@ -1,0 +1,8 @@
+streamlit
+spacy
+reportlab
+pytesseract
+Pillow
+numpy
+pdf2image
+requests
